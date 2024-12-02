@@ -92,7 +92,7 @@ CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch --nproc_per_node=1 --m
 
 ## Acknowledge
 
-The repository is benefit a lot from [DETR](https://github.com/facebookresearch/detr), [SPL](https://github.com/WendongZh/SPL), [ResTormer](https://github.com/swz30/Restormer), and [CTSDG](https://github.com/xiefan-guo/ctsdg). Thanks a lot for their excellent work.
+The repository is benefit a lot from [DETR](https://github.com/facebookresearch/detr), [Lama](https://github.com/advimman/lama), [SPL](https://github.com/WendongZh/SPL), [ResTormer](https://github.com/swz30/Restormer), and [CTSDG](https://github.com/xiefan-guo/ctsdg). Thanks a lot for their excellent work.
 
 ## Citation
 If you find our method or dataset useful for your reserach, please cite:
