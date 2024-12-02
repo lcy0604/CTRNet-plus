@@ -393,7 +393,7 @@ def build_ffc(args):
     with open('./ffc_model/ffc.yaml', 'r') as f:
         ffc_config = OmegaConf.create(yaml.safe_load(f))
     ffc_inpaint = FFCResNetGenerator(**ffc_config.generator)
-    state_gen = torch.load('./ffc_model/best.ckpt', map_location='cpu')
+    state_gen = torch.load('./pretrained/best.ckpt', map_location='cpu')
     pretrained_model = state_gen['state_dict']
     model_dict = ffc_inpaint.state_dict()
     new_dict = {k.split('generator.')[-1]: v for k, v in pretrained_model.items() if k.split('generator.')[-1] in model_dict.keys()}
@@ -406,6 +406,6 @@ def build_pixel_decoder(args):
 
 def build_structure(args):
     model = StructureGen()
-    state_gen = torch.load('Structure_Gen.pth', map_location='cpu')
+    state_gen = torch.load('./ptrtrained/Structure_Gen.pth', map_location='cpu')
     model.load_state_dict(state_gen)    
     return model
