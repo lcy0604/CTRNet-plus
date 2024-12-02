@@ -29,14 +29,18 @@ data/
 ----train
 ------image/*.jpg
 ------label/*.jpg
+------mask/*.jpg
 ------gt/*.txt
 
 ----test
 ------image/*.jpg
 ------label/*.jpg
+------mask/*.jpg
 ------gt/*.txt
 ...
 ```
+
+The mask can be generated using the gt by OpenCV (```cv2.drawContours```), the example are shown in [here](https://github.com/lcy0604/EraseNet/tree/master/example/mask).
 
 ## Training 
 Create an new directory (```./pretrained/```) and place the pretrain weights for FFC-based inpainting model--LaMa, VGG-16, and our pretrain model for structure generator. All of them are available at [here](https://drive.google.com/drive/folders/14xqLRXzJB10z6GF2fMw8O_kwN-qhilOD?usp=sharing).  You can also retrain the structure generator yoursellf.
